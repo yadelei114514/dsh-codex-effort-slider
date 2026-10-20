@@ -20,7 +20,7 @@
 2. **右键**：在**滑条上点右键**打开设置面板 
 3. 设置**即时生效并记住**；出问题时点一下「复制诊断」把逐帧记录导出。
 
-<img src="https://raw.githubusercontent.com/Microqian2th/dsh-codex-effort-slider/main/preview/screenshots/context-menu.png" width="330" alt="右键滑条打开设置面板：动画效果（快速/简洁/完整，三档都不受系统减少动态影响）、已到达档位的刻度点（亮白/同色/隐藏）、复制诊断 / 恢复默认 / 关闭">
+<img src="preview/screenshots/context-menu.png" width="330" alt="右键滑条打开设置面板：动画效果（快速/简洁/完整，三档都不受系统减少动态影响）、已到达档位的刻度点（亮白/同色/隐藏）、复制诊断 / 恢复默认 / 关闭">
 
 | 设置项 | 可选 | 说明 |
 |---|---|---|
@@ -32,21 +32,21 @@
 
 收起态：档位就在输入框里那枚模型席按钮上，**点开之前**也按档位着色。
 
-![收起态：输入框里的档位显示](https://raw.githubusercontent.com/Microqian2th/dsh-codex-effort-slider/main/preview/screenshots/shot-01.png)
+![收起态：输入框里的档位显示](preview/screenshots/shot-01.png)
 
 点开模型菜单后（左列浅色主题 / 右列深色主题，四档从上到下）：
 
 | 档位 | 浅色主题 | 深色主题 |
 |---|---|---|
-| **Max** | ![浅色 Max](https://raw.githubusercontent.com/Microqian2th/dsh-codex-effort-slider/main/preview/screenshots/shot-02.png) | ![深色 Max](https://raw.githubusercontent.com/Microqian2th/dsh-codex-effort-slider/main/preview/screenshots/shot-06.png) |
-| **High** | ![浅色 High](https://raw.githubusercontent.com/Microqian2th/dsh-codex-effort-slider/main/preview/screenshots/shot-03.png) | ![深色 High](https://raw.githubusercontent.com/Microqian2th/dsh-codex-effort-slider/main/preview/screenshots/shot-07.png) |
-| **Low** | ![浅色 Low](https://raw.githubusercontent.com/Microqian2th/dsh-codex-effort-slider/main/preview/screenshots/shot-04.png) | ![深色 Low](https://raw.githubusercontent.com/Microqian2th/dsh-codex-effort-slider/main/preview/screenshots/shot-08.png) |
-| **Off** | ![浅色 Off](https://raw.githubusercontent.com/Microqian2th/dsh-codex-effort-slider/main/preview/screenshots/shot-05.png) | ![深色 Off](https://raw.githubusercontent.com/Microqian2th/dsh-codex-effort-slider/main/preview/screenshots/shot-09.png) |
+| **Max** | ![浅色 Max](preview/screenshots/shot-02.png) | ![深色 Max](preview/screenshots/shot-06.png) |
+| **High** | ![浅色 High](preview/screenshots/shot-03.png) | ![深色 High](preview/screenshots/shot-07.png) |
+| **Low** | ![浅色 Low](preview/screenshots/shot-04.png) | ![深色 Low](preview/screenshots/shot-08.png) |
+| **Off** | ![浅色 Off](preview/screenshots/shot-05.png) | ![深色 Off](preview/screenshots/shot-09.png) |
 
 对比度都算过（最高档的数值文字：白底 **4.23:1**、深色底 **4.02:1**）。
-**不用安装也能先玩**：**[▶ 在线试玩](https://htmlpreview.github.io/?https://raw.githubusercontent.com/Microqian2th/dsh-codex-effort-slider/main/preview/panel.html)** —— 或者下载仓库后**双击本地** `preview/panel.html`。可拖动、切浅深色、切 4/2/6 档模型（外加「上游给反了」和「自定义词」两组对照），动画三档（快速 / 简洁 / 完整）都能试。
+**不用安装也能先玩**：**[▶ 在线试玩](https://htmlpreview.github.io/?https://raw.githubusercontent.com/yadelei114514/dsh-codex-effort-slider/main/preview/panel.html)** —— 或者下载仓库后**双击本地** `preview/panel.html`。可拖动、切浅深色、切 4/2/6 档模型（外加「上游给反了」和「自定义词」两组对照），动画三档（快速 / 简洁 / 完整）都能试。
 > ⚠️ 直接点 `raw.githubusercontent.com` 的链接只会看到**源码** ✗ —— 它以文本形式返回文件；要看效果请用上面的「在线试玩」或本地打开。
-（另有脚本生成的实现示意图：[`preview/seat-color.png`](https://raw.githubusercontent.com/Microqian2th/dsh-codex-effort-slider/main/preview/seat-color.png)、[`preview/distribution.png`](https://raw.githubusercontent.com/Microqian2th/dsh-codex-effort-slider/main/preview/distribution.png)）。
+（另有脚本生成的实现示意图：[`preview/seat-color.png`](preview/seat-color.png)、[`preview/distribution.png`](preview/distribution.png)）。
 
 它不新增入口：**直接改造官方模型菜单里的「推理等级」那一行** ——
 那一行被加高上下内距、允许折行，滑条作为第二行铺满整行宽度；拖到最高档时整条轨道亮起紫色能量层。
@@ -69,106 +69,109 @@
 
 ## 安装
 
-> 本仓库是 [`Microqian2th/dsh-codex-effort-slider`](https://github.com/Microqian2th/dsh-codex-effort-slider) 的衍生版，
-> 额外带**档位语义排序**（上游 `efforts` 顺序反转也不会反向显示）。包名是 scoped 的
-> **`@yadelei114514/dsh-codex-effort-slider`**，与原版**可以同时安装、互不覆盖**。
+> **本仓库是 [`Microqian2th/dsh-codex-effort-slider`](https://github.com/Microqian2th/dsh-codex-effort-slider) 的衍生版**，
+> 在原版基础上加了**档位语义排序**（上游 `efforts` 顺序给反了也不会反向显示，见下文「档位高低的判定」）。
+> 包名是 scoped 的 **`@yadelei114514/dsh-codex-effort-slider`**，与原版**可以同时安装、互不覆盖**。
 
-### 首选：一条命令
+### 先搞清楚你是哪种 DSH
 
-```powershell
-# 从 npm（已发布）
-dsh plugin --profile <你的 profile> add @yadelei114514/dsh-codex-effort-slider
+| 你用的是 | 怎么装 | 为什么 |
+|---|---|---|
+| **命令行版 DSH**（`dsh` / `dsh web` / `dsh tui`…） | 本文「命令行版」一节 | 用 `dsh plugin` 一条命令 |
+| **DSH Desktop**（桌面应用） | 本文「Desktop」一节 | `desktop` 是 Electron 独占的保留 profile，**命令行装不进去** |
 
-# 或直接从 GitHub（不用等发版）
-dsh plugin --profile <你的 profile> add github:yadelei114514/dsh-codex-effort-slider
+先确认 profile 名（一般就是 `web`）：
+
+```bash
+ls "$DSH_HOME/profiles"        # DSH_HOME 默认 ~/.dsh
 ```
 
-> `<你的 profile>` 一般是 `web`（`ls $DSH_HOME/profiles` 可以看到有哪些）。
-> 装完**必须完全退出并重开** DSH —— 客户端 bundle 是启动时读进内存的，只关窗口不生效。
+---
 
-> **DSH Desktop 用户**：桌面版的 profile 由 Electron 独占管理，命令行装不了它 —— 请走
-> **设置 → 插件 → 添加插件**，在输入框里填 **`@yadelei114514/dsh-codex-effort-slider`**，
-> 或填 `github:yadelei114514/dsh-codex-effort-slider`，点安装，**完全退出并重开** DSH Desktop。
+### 命令行版 DSH
 
-不想用 npm 也没问题 —— 下面两条路一样有效。
+**从 GitHub 装**（推荐，无需发版）：
 
-> 直接下载打包好的 zip：本仓库的 **Releases → 最新版**。
+```bash
+dsh plugin --profile web add github:yadelei114514/dsh-codex-effort-slider
+```
 
-**只走 DSH Desktop 自己的插件面板**——命令行装不了 `desktop` profile：
+**从本地目录装**（拿到了 zip 或已经 clone）：
 
-```powershell
-dsh plugin --profile desktop add link:"F:\Work Space\DeepSeek Harness\dsh-codex-effort-slider"
+```bash
+dsh plugin --profile web add link:"/绝对/路径/dsh-codex-effort-slider-main"
+```
+
+**从 npm 装**（仅在包已发布到 registry 时可用）：
+
+```bash
+dsh plugin --profile web add @yadelei114514/dsh-codex-effort-slider
+```
+
+> 把 `web` 换成你自己的 profile 名。
+
+---
+
+### DSH Desktop
+
+桌面版的 profile 由 Electron 独占管理，命令行会被直接拒绝：
+
+```bash
+dsh plugin --profile desktop add link:"/任意/路径"
 # error: profile "desktop" is managed exclusively by the Electron application
 ```
 
-（这不是配置问题：`bin.js` 里对 `desktop` 直接 `program.error`，只有 Electron 应用本人被允许管理这个保留 profile。）
+这不是配置问题——`bin.js` 里对 `desktop` 直接 `program.error`，只有应用本人能管这个保留 profile。
 
-两条路：
+**方式 1：插件面板（推荐）**
 
-1. **面板安装**（推荐）：**设置 → 插件 → 添加插件** → 填本地目录路径 → 安装 → 重启 DSH Desktop。
-   面板会校验两件事，本插件都已满足：是有效的插件包、声明了组合包（`dsh.bundle.patch`）。
-2. **手工安装**（当面板本身不可用时——例如 `profileContext` 没挂上，`dsh-base` 会把
-   `plugin-manager` 整行 `disabled`，设置侧栏里就看不到「插件」）：
-   备份 profile 的 `package.json` → 加一条 `link:` 依赖 → `dsh.profile.bundles` 追加本包名 →
-   在 `profiles/<profile>/node_modules/` 下建一个指向本目录的 junction → 重启。
+**设置 → 插件 → 添加插件**，填三者之一：
 
-> 卸载用面板；手工装的用 `cmd /c rmdir <junction>`（**不要**用 `Remove-Item -Recurse`，
-> 那可能顺着 junction 把插件目录里的文件删掉）。
+- `github:yadelei114514/dsh-codex-effort-slider`
+- `@yadelei114514/dsh-codex-effort-slider`（需已发布 npm）
+- 本地目录的绝对路径（解压 zip 后那一层）
 
-想先看观感、不装也行：`node preview/make-preview.mjs` 生成 `preview/panel.html`，
-用浏览器打开即可拖动、切浅深色、切 4/2/6 档模型（页面里连官方菜单外壳都复刻了，
-CSS 与拖动数学都是从真产物抽出来的）。
+面板会校验两件事，本插件都已满足：是有效的插件包、声明了组合包（`dsh.bundle.patch`）。
 
-## 分享给别人
+**方式 2：脚本（面板不可用时）**
 
-### 打包
+面板本身不可用的情形确实存在——例如 `profileContext` 没挂上时，`dsh-base` 会把 `plugin-manager`
+整行 `disabled`，设置侧栏里就看不到「插件」：
 
 ```powershell
-npm run pack      # = powershell -NoProfile -ExecutionPolicy Bypass -File pack-dist.ps1
+install.cmd                    # 装进 desktop
+install.cmd -Profile web       # 装进别的 profile
+install.cmd -Uninstall         # 卸载
 ```
 
-产出 `dist/yadelei114514-dsh-codex-effort-slider-<version>.zip`（约 350 KB）。本插件**零运行时依赖、无构建步骤** ——
-解开就能装，接收方不需要 `pnpm install`。若要让人从 GitHub / npm 装，把**本目录的内容**推到仓库根
-（`package.json` 必须在仓库根，pnpm 才能把它当包解析）。
+`install-profile.ps1` 做四件事：备份 profile 的 `package.json` → 加一条 `link:` 依赖 →
+把包名追加进 `dsh.profile.bundles` → 在 profile 的 `node_modules` 下建链接
+（Windows 用 junction，其它平台用符号链接），最后校验这三项都成立。
+包名从插件自己的 `package.json` 读（**安装与卸载都是**），所以改名不会让卸载静默失效。
 
-### 接收方怎么装（三种，按省事程度排序）
+---
 
-1. **面板安装（推荐）**：DSH Desktop → **设置 → 插件 → 添加插件**，填三者之一：
-   - **本地目录路径**（解开 zip 后那一层目录）
-   - **`github:yadelei114514/dsh-codex-effort-slider`**（面板会先做一次 GitHub 连接检查，再交给 pnpm 拉取）
-   - **npm 包名 `@yadelei114514/dsh-codex-effort-slider`**（scoped 包，走 registry）
-2. **命令行**（**只有非 desktop profile 能这么装**）：
-   ```powershell
-   dsh plugin --profile web add link:"<插件的绝对路径>"
-   dsh plugin --profile web add github:yadelei114514/dsh-codex-effort-slider
-   dsh plugin --profile web add @yadelei114514/dsh-codex-effort-slider
-   ```
-   `desktop` 是 Electron 保留 profile，命令行会被直接拒绝
-   （`error: profile "desktop" is managed exclusively by the Electron application`）。
-3. **脚本**（desktop profile 且设置里没有「插件」面板时）：
-   ```powershell
-   install.cmd                    # 装进 desktop
-   install.cmd -Profile web       # 装进别的 profile
-   install.cmd -Uninstall         # 卸载
-   ```
-   `install-profile.ps1` 做四件事：备份 profile 的 `package.json` → 加一条 `link:` 依赖 →
-   把包名追加进 `dsh.profile.bundles` → 在 profile 的 `node_modules` 下建链接
-   （Windows 用 junction，其它平台用符号链接），最后校验这三项都成立。
-   包名从插件自己的 `package.json` 读（安装与卸载都是），所以改名后卸载仍然有效。
-   **已用一个假 profile 完整跑过安装与卸载**，并确认卸载只删链接、不会顺着链接删掉插件本体。
+### ⚠️ 装完必须完全退出并重开
 
-### 注意事项
+客户端 bundle 是**启动时读进内存**的。只关窗口不生效，必须从托盘/任务栏彻底退出再启动。
 
-- `link:` 里是**绝对路径**，所以每台机器装完都必须指向自己的目录（面板/脚本会自动写对）。
-- 改过 `lib/client.js` 后**必须完全退出并重开** DSH Desktop 才生效 —— 宿主在启动时把插件读进内存，
-  只关窗口不够。
-- **卸载**：面板卸载，或 `install.cmd -Uninstall`；手工建过 junction 的用 `cmd /c rmdir <junction>`。
-  **不要**用 `Remove-Item -Recurse`，它可能顺着链接把插件目录里的文件删掉。
-- **兼容性**：DOM 锚点全部是官方**语义属性**（`aria-haspopup` / `aria-expanded` / `aria-controls` / `role`）
-  加两个官方 class；哈希前缀不依赖（收起态那段档位文字是**按文字**认的）。官方若改语义，插件
-  **静默不生效**（fail-open），不会把官方界面改坏。本插件**不注册任何宿主钩子、不注入消息**
-  （测试里有 `ctx.on` 监视断言守着这一点）。
-- 许可 MIT（见 `LICENSE`）。`package.json` 已去掉 `"private"`，并发布在 npm 上：**`dsh-codex-effort-slider`**。
+### 卸载
+
+```bash
+dsh plugin --profile web remove @yadelei114514/dsh-codex-effort-slider
+```
+
+Desktop 用面板卸载；手工建过 junction 的用 `cmd /c rmdir <junction>`——
+**不要**用 `Remove-Item -Recurse`，它可能顺着链接把插件目录里的文件删掉。
+
+### 不想装，只想看效果
+
+```bash
+node preview/make-preview.mjs
+```
+
+生成 `preview/panel.html`，浏览器打开即可拖动、切浅深色、切 4/2/6 档模型
+（页面里连官方菜单外壳都复刻了，CSS 与拖动数学都是从真产物抽出来的）。
 
 ## 它怎么工作（两半）
 
@@ -372,3 +375,8 @@ npm run preview   # 生成 preview/panel.html
 ## 许可
 
 MIT。无第三方代码：闪电标/雪弗龙是自己画的路径，粒子层是自己写的 DOM/CSS。
+
+本仓库是 [`Microqian2th/dsh-codex-effort-slider`](https://github.com/Microqian2th/dsh-codex-effort-slider) 的衍生版，
+同样以 MIT 发布。`package.json` 里的包名是 scoped 的 **`@yadelei114514/dsh-codex-effort-slider`**，
+与 npm 上原版的 `dsh-codex-effort-slider` 是**两个独立的包**，可以共存。
+
