@@ -44,8 +44,27 @@
 | **Off** | ![浅色 Off](preview/screenshots/shot-05.png) | ![深色 Off](preview/screenshots/shot-09.png) |
 
 对比度都算过（最高档的数值文字：白底 **4.23:1**、深色底 **4.02:1**）。
-**不用安装也能先玩**：**[▶ 在线试玩](https://htmlpreview.github.io/?https://raw.githubusercontent.com/yadelei114514/dsh-codex-effort-slider/main/preview/panel.html)** —— 或者下载仓库后**双击本地** `preview/panel.html`。可拖动、切浅深色、切 4/2/6 档模型（外加「上游给反了」和「自定义词」两组对照），动画三档（快速 / 简洁 / 完整）都能试。
-> ⚠️ 直接点 `raw.githubusercontent.com` 的链接只会看到**源码** ✗ —— 它以文本形式返回文件；要看效果请用上面的「在线试玩」或本地打开。
+
+### 装之前想先看看它长什么样
+
+插件要装进 DSH 并重启才看得见，所以仓库里附了一个**离线预览页**：`preview/panel.html`。
+它是一个**纯静态 HTML 文件**——不联网、不需服务、不碰 DeepSeek，双击就能在浏览器里打开。
+
+它复刻了官方模型菜单的外壳，并用**和插件完全相同的方式**（同样 4 个内联样式 + 同样的 append）
+把滑条注入到「推理等级」那一行，所以看到的加高、折行、能量层都是真东西。
+CSS 与拖动数学都是从 `lib/client.js` **抽出来**的（抽取失败会直接抛错），不是另写一份近似实现。
+
+页面上可以：拖动、切浅深色、切 4/2/6 档模型（外加「上游给反了」和「自定义词」两组对照）、
+试动画三档（快速 / 简洁 / 完整）。
+
+```bash
+node preview/make-preview.mjs     # 重新生成 preview/panel.html
+```
+
+> 仓库里那份是生成好的，直接双击即可，不跑这条命令也能看。
+> ⚠️ 在 GitHub 上点 `preview/panel.html` 只会看到**源码**（它按纯文本渲染）——
+> 想看效果请下载仓库后本地打开。
+
 （另有脚本生成的实现示意图：[`preview/seat-color.png`](preview/seat-color.png)、[`preview/distribution.png`](preview/distribution.png)）。
 
 它不新增入口：**直接改造官方模型菜单里的「推理等级」那一行** ——
@@ -164,14 +183,10 @@ dsh plugin --profile web remove @yadelei114514/dsh-codex-effort-slider
 Desktop 用面板卸载；手工建过 junction 的用 `cmd /c rmdir <junction>`——
 **不要**用 `Remove-Item -Recurse`，它可能顺着链接把插件目录里的文件删掉。
 
-### 不想装，只想看效果
+### 不想装，只想先看看
 
-```bash
-node preview/make-preview.mjs
-```
-
-生成 `preview/panel.html`，浏览器打开即可拖动、切浅深色、切 4/2/6 档模型
-（页面里连官方菜单外壳都复刻了，CSS 与拖动数学都是从真产物抽出来的）。
+见上文「[装之前想先看看它长什么样](#装之前想先看看它长什么样)」——
+`preview/panel.html` 是纯静态页面，本地双击即可，不联网也不需要装任何东西。
 
 ## 它怎么工作（两半）
 
