@@ -139,7 +139,7 @@ function cssValue(node, prop) {
 section("1. 接线与产物");
 {
   const { registration, plugin, entry, document, host, internals } = await setup();
-  eq(registration.id, "dsh-codex-effort-slider", "[1] bundle 注册 id 正确");
+  eq(registration.id, "@yadelei114514/dsh-codex-effort-slider", "[1] bundle 注册 id 正确");
   ok(Array.isArray(plugin.inject) && plugin.inject.indexOf("slots") >= 0, "[1] inject 含 slots");
   ok(plugin.inject.indexOf("modelDirectories") >= 0, "[1] inject 含 modelDirectories（读写官方档位靠它）");
   ok(plugin.inject.indexOf("sessions") >= 0, "[1] inject 含 sessions（判子代理会话靠它）");
